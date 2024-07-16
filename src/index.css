@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+::selection{
+    background-color:#475b6c;
+    color: #e5dce2;
+}
+
+@font-face {
+    font-family: Chillax;
+    src: url('./assets/fonts/Chillax-Variable.ttf');
+}
+@font-face {
+    font-family: Bonny;
+    src: url('./assets/fonts/Bonny-Variable.ttf');
+}
+@font-face {
+    font-family: Striper;
+    src: url('./assets/fonts/Striper-Regular.otf');
+}
+*{
+    font-family: Chillax;
+}
+body{
+    background-color: #d8ebf4;
+}
+
+::-webkit-scrollbar{
+    width: 4px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#1a535c;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color:#ffcc00;
+    border-radius: 10px;
+}
+h1{
+    font-family: Bonny;
+}
