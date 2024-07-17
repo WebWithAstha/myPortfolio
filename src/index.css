@@ -16,15 +16,12 @@
     font-family: Bonny;
     src: url('./assets/fonts/Bonny-Variable.ttf');
 }
-@font-face {
-    font-family: Striper;
-    src: url('./assets/fonts/Striper-Regular.otf');
-}
 *{
     font-family: Chillax;
 }
 body{
     background-color: #d8ebf4;
+    background-color: #fecaca;
 }
 
 ::-webkit-scrollbar{
@@ -39,6 +36,6 @@ body{
     background-color:#ffcc00;
     border-radius: 10px;
 }
-h1{
-    font-family: Bonny;
-}
+/* h1{
+font-family: Bonny;
+} */
