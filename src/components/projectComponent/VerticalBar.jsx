@@ -3,37 +3,21 @@ import { motion } from 'framer-motion'
 import gsap from 'gsap'
 import React, { useRef, useState } from 'react'
 
-const VerticalBar = ({id,title,img}) => {
+const VerticalBar = ({id,title,img,left}) => {
     
     const parentRef = useRef(null)
     const imgRef = useRef(null)
 
     const [x, setx] = useState(null)
     const [y, sety] = useState(null)
-    
-    
-    
-    // const handleMove = (e)=>{
-    //     console.log(e.clientY)
-    //     setx(e.clientX)
-    //     sety(e.clientY)
-    // }
-
-    // useGSAP(()=>{
-    //     // gsap.to(imgRef.current,{
-    //     //     x:x,
-    //     //     y:y,
-    //     //     // duration:0.5,
-    //     //     ease:"elastic.inOut"
-    //     // })
-    //     imgRef.current.style.left = x+'px'
-    //     imgRef.current.style.top = y+'px'
-    // },[x,y])
+    const [leftv, setleftv] = useState(left)
 
 
 
     return (
-        <div ref={parentRef} onMouseMove={e=>handleMove(e)} id={id} className="h-screen bg-purple-300/[0] border-r-2 w-56 shrink-0 flex flex-col gap-16 items-center justify-start relative overflow-hidden">
+        <div ref={parentRef} onMouseMove={e=>handleMove(e)} id={id} style={{
+            left:`${leftv}`
+        }} className="h-screen sticky bg-purple-300/[0.9] border-r-2 w-56 shrink-0 flex flex-col gap-16 items-center justify-start overflow-hidden">
             <motion.div
             ref={imgRef}
             animate={{x:20}}
