@@ -17,7 +17,7 @@ const VerticalBar = ({id,title,img,left}) => {
     return (
         <div ref={parentRef} onMouseMove={e=>handleMove(e)} id={id} style={{
             left:`${left && left}%`
-        }} className="h-screen bar sticky z-10 w-56 bg-[#d9f99d] shrink-0 flex flex-col gap-16 items-center justify-start overflow-hidden">
+        }} className="h-screen bar sticky z-10 w-56 bg-[#bdbcae] shrink-0 flex flex-col gap-16 items-center justify-start overflow-hidden">
             <motion.div
             ref={imgRef}
             animate={{x:20}}

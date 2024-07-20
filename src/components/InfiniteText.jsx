@@ -8,7 +8,7 @@ const InfiniteText = () => {
     })
     return (
         <div className='w-full overflow-hidden mt-40 mb-20'>
-        <div className='w-full flex overflow-hidden bg-[#1a535c] text-[#b0f2b5]'>
+        <div className='w-full flex overflow-hidden bg-[#2c1c13] text-[#bdbcae]'>
             <h1 className='font-[bonny] whitespace-nowrap text-7xl pl-10 py-4'>More About Me</h1>
             <h1 className='font-[bonny] whitespace-nowrap text-7xl pl-10 py-4'>More About Me</h1>
             <h1 className='font-[bonny] whitespace-nowrap text-7xl pl-10 py-4'>More About Me</h1>

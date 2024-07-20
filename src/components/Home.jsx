@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
 
-    <div className='w-full  min-h-screen text-[#1A535C] font-mono'>
+    <div className='w-full  min-h-screen text-[#2c1c13] font-mono'>
 
         <Hero />
 

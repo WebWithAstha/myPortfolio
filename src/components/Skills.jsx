@@ -19,18 +19,18 @@ const visible ={
 const Skills = () => {
     const skillRef = useRef(null)
 
-    useGSAP(() => {
-        gsap.to("body", {
-            backgroundColor: "#d9f99d",
-            scrollTrigger: {
-                scroller: "body",
-                trigger: skillRef.current,
-                start: "top 1%",
-                end: "top 0%",
-            }
+    // useGSAP(() => {
+    //     gsap.to("body", {
+    //         backgroundColor: "#d9f99d",
+    //         scrollTrigger: {
+    //             scroller: "body",
+    //             trigger: skillRef.current,
+    //             start: "top 1%",
+    //             end: "top 0%",
+    //         }
 
-        })
-    })
+    //     })
+    // })
 
 
 

@@ -5,16 +5,16 @@ import React, { useRef } from 'react'
 const ContactView = () => {
     const parentRef = useRef(null)
 
-    useGSAP(() => {
-        gsap.to("body", {
-            backgroundColor: "#d9f99d",
-            scrollTrigger: {
-                scroller: "body",
-                trigger: parentRef.current,
-                start: "top 10%",
-            }
-        })
-    })
+    // useGSAP(() => {
+    //     gsap.to("body", {
+    //         backgroundColor: "#d9f99d",
+    //         scrollTrigger: {
+    //             scroller: "body",
+    //             trigger: parentRef.current,
+    //             start: "top 10%",
+    //         }
+    //     })
+    // })
 
     return (
         <div ref={parentRef} className="w-full h-screen flex gap-20 py-20 px-40">
