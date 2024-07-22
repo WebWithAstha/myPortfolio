@@ -66,7 +66,7 @@ const Square = ({ active, setActive, colIndex, rowIndex, x, y }) => {
                 zIndex: isDragging ? 1 : 0
             }}
             animate={{ scale: 1.1 }}
-            className="md:px-20 h-max px-4 cursor-pointer md:py-10 py-3 text-[#d8ebf4] font-semibold mb-[1px] bg-[#1a535c]/[.5] md:text-4xl text-2xl"
+            className="md:px-20 h-max px-4 cursor-pointer md:py-10 py-3 text-[#e8e8e3]/[.5] hover:text-[#e8e8e3] hover:bg-[#2c1c13] transition-all duration-100 font-semibold mb-[1px] bg-[#2c1c13]/[.9] md:text-4xl text-2xl"
         >
             {grid[rowIndex][colIndex]}
         </motion.div>
