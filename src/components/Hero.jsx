@@ -1,52 +1,94 @@
-import React from 'react'
-import cloud from '../assets/images/gifs/cloud.gif'
-import chick from '../assets/images/gifs/chick.gif'
-import brush from '../assets/images/gifs/brush.gif'
+import React, { useRef } from 'react'
 import hero from '../assets/images/hero.jpg'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Cloud from './Cloud'
+import Hover from './animations/Hover'
 
 
 const Hero = () => {
 
-  // gsap.registerPlugin(ScrollTrigger)
+  const heroParentRef = useRef(null)
 
   useGSAP(() => {
-    gsap.to('p', {
-      rotate: -1,
+    let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: 'p',
         scroller: "body",
-        start: "top 20%",
-        end: "top 0%",
-        scrub: true,
+        trigger: heroParentRef.current,
+        start: "top 0%",
+        end: "top -100%",
+        // snap: true,
+        scrub: 1,
+        markers: true
       }
     })
-  }, [])
+    tl
+    // .to(heroParentRef.current,{
+    //   y:"50%"
+    // })
+    // .to(heroParentRef.current,{
+    //   y:"100%"
+    // },"tog")
+      .to("#heroText h1:nth-child(1),.desc p,.move-dwn", {
+        scale:0.7,
+        opacity: 0,
+        duration: 1,
+        y:-200,
+        rotate:-10,
+        ease: 'power3.inOut'
+      },"tog")
+      // .to(heroParentRef.current,{
+      //   // y:"+=200%"
+      // })
+  })
+
 
   return (
-    <div className="content shrink-0 relative w-full overflow-hidden md:pt-32 md:py-20 flex flex-col md:px-40 px-10">
-      <h1 className='text-[18vw] whitespace-nowrap uppercase leading-none font-[bonny]'>Astha Lodhi</h1>
-      <div className="flex gap-20">
-      <div className="mt-6">
-      <p className='w-[30vw] text-xl font-normal mb-2'>a 2nd-year B.Tech CSE IoT student and a <span className='font-[bonny] text-2xl mx-2 inline-block font-black'>Mern</span>  stack enthusiast. I've created stunning projects and beautiful websites. I love tackling new challenges and contributing to dynamic, innovative teams.</p>
+    <div ref={heroParentRef} className="content shrink-0 relative w-full h-screen overflow-hidden md:pt-32 md:py-20 flex flex-col md:px-40 px-10">
+      {/* <Hover /> */}
+      <div className="overflow-hidden">
 
-      <h1 className='relative shadow-inner mt-4 shadow-[#1a535c] px-10 py-3 rounded-full w-max font-black text-2xl'>Get In Touch</h1>
+      <h1 className='move-dwn text-[17vw] leading-[.8] -mb-4 whitespace-nowrap font-black uppercase font-[bonny]'>Astha Lodhi</h1>
       </div>
-      <div className="w-72 h-80 bg-[#acc57c] pt-2 rounded-t-lg rounded-bl-lg">
-        <img className='w-full h-full object-cover object-[10px_-50px]' src={hero} alt="" />
-        {/* <img className='w-full h-full object-cover' src="https://plus.unsplash.com/premium_photo-1692340973646-f017e0433371?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /> */}
-      </div>
-      <div className="self-end w-max ml-auto ">
-    <h1 className='ml-auto text-right text-6xl'>Get</h1>
-      <h1 className='self-end ml-auto uppercase font-black text-6xl mb-10'>Resume</h1>
-      </div>
+      <div className="flex gap-20 mt-16">
+        <div className="flex justify-between flex-col">
+          <div className="desc">
+            <div className="h-[2rem] overflow-hidden">
+              <p className='w-[30vw] text-2xl font-normal'>a 2nd-year B.Tech CSE IoT student and a</p>
+            </div>
+            <div className="h-[2rem] overflow-hidden">
+              <p className='w-[30vw] text-2xl font-normal overflow-hidden'><span className='font-[bonny] text-2xl inline-block font-black'>Mern</span>  stack enthusiast. I've created stunning</p>
+            </div>
+            <div className="h-[2rem] overflow-hidden">
+              <p className='w-[30vw] text-2xl font-normal overflow-hidden'>projects and beautiful websites. I love</p>
+            </div>
+            <div className="h-[2rem] overflow-hidden">
+              <p className='w-[30vw] text-2xl font-normal overflow-hidden'>tackling new challenges and contributing</p>
+            </div>
+            <div className="h-[2rem] overflow-hidden">
+              <p className='w-[30vw] text-2xl font-normal overflow-hidden'>to dynamic, innovative teams.</p>
+            </div>
+          </div>
+<div className="h-20 overflow-hidden">
+
+          <h1 id='getBtn' className='move-dwn relative shadow-inner mt-6 shadow-[#1a535c] bg-[#2c1c13] text-white px-10 py-3 rounded-full w-max font-bold text-2xl'>Get In Touch</h1>
+</div>
+        </div>
+        <div className="w-72 h-72 overflow-hidden rounded-t-lg rounded-bl-lg">
+          <img id='heroImg' className='move-dwn w-full h-full object-cover object-[10px_-50px]' src={hero} alt="" />
+        </div>
+        <div className="self-end w-max ml-auto ">
+          <div className="h-28 overflow-hidden">
+
+          <h1 className='move-dwn ml-auto text-right text-6xl'>Get</h1>
+          </div>
+          <div className="h-36 overflow-hidden">
+          <h1 className='move-dwn self-end ml-auto uppercase font-black text-6xl'>Resume</h1>
+          </div>
+        </div>
 
       </div>
-      {/* <h1 className='text-[10vw] leading-none'>Creative</h1> */}
-      {/* <h1 className='text-[10vw] leading-none text-nowrap'><span className=' font-[bonny]'>MERN</span> <span>Developer</span></h1> */}
       <p className='md:text-8xl hidden text-6xl font-[Chillax] relative md:w-[80%]'>
         {/* <Cloud/> */}
         <span className='relative z-[9] '>
@@ -57,8 +99,7 @@ const Hero = () => {
         <span className='relative md:ml-4 '>
           Developer !! turning your vision <br /> into reality.
         </span>
-      </p>  
-      {/* <button className='self-start mt-4'>Get resume</button> */}
+      </p>
 
     </div>
   )
