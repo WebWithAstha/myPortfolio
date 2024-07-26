@@ -14,13 +14,23 @@
 }
 @font-face {
     font-family: Bonny;
-    src: url('./assets/fonts/Bonny-Variable.ttf');
+    src: url('./assets/fonts/BespokeStencil-Variable.ttf');
+}
+@font-face {
+    font-family: bespoke;
+    src: url('./assets/fonts/BespokeStencil-Variable.ttf');
 }
 *{
     font-family: Chillax;
 }
 body{
-    background-color: #e8e8e3;    
+    /* background-color: #e8e8e3;     */
+    /* background-color: white; */
+    /* color: black; */
+    background-color: #000;
+    color: white;
+
+    /* text-[#2c1c13] */
 }
 
 ::-webkit-scrollbar{
