@@ -9,32 +9,38 @@ const grid = [
     [],
     [
         
-        "Figma",
+        "Reactjs",
+        "Redux",
+        "Express.js",
         "Node.js",
         "MongoDB",
-        "Razorpay",
-        "Express.js",
+        "RESTful APIs",
     ],
     [
-        "React",
-        "Css",
         "Html",
-        "Framer Motion",
+        "Css",
         "Tailwind Css",
-
+        "Figma",
+        "Razorpay",
+        
     ], [
-
+        
         "Git",
         "Javascript",
         "VS Code",
         "Next.js",
-
-    ], [
         "GitHub",
+        
+    ], [
+        "Postman",
+        "AJAX",
+        "swiperjs",
+        "gsap",
+    ], [
+        "Framer Motion",
         "Postman",
         "AJAX",
         "Context API",
-        "RESTful APIs",
     ]
 ];
 const gap = 0;
@@ -65,8 +71,8 @@ const Square = ({ active, setActive, colIndex, rowIndex, x, y }) => {
                 y: isDragging ? y : dy,
                 zIndex: isDragging ? 1 : 0
             }}
-            animate={{ scale: 1.1 }}
-            className="md:px-20 h-max px-4 cursor-pointer md:py-10 py-3 text-[#e8e8e3]/[.5] hover:text-[#e8e8e3] hover:bg-[#2c1c13] transition-all duration-100 font-semibold mb-[1px] bg-[#2c1c13]/[.9] md:text-4xl text-2xl"
+            // animate={{ scale: 1.1 }}
+            className="md:px-20 h-max px-4 cursor-pointer rounded-xl md:py-8 py-3 transition-all duration-100 font-semibold mb-[1px] bg-white/[.4] md:text-[2vw] text-2xl"
         >
             {grid[rowIndex][colIndex]}
         </motion.div>
@@ -93,7 +99,7 @@ const Trial = () => {
 
     return (
         <div className="flex justify-center items-center">
-            <div className='w-[80vw] h-max flex justify-center items-center flex-wrap '>
+            <div className='w-[80vw] h-max flex justify-center items-center gap-2 flex-wrap '>
                 {grid.map((row, rowIndex) =>
                     row.map((_item, colIndex) => (
                         <Square

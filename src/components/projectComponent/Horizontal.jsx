@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
-import Heading from './projectComponent/Heading'
-import VerticalBar from './projectComponent/VerticalBar'
-import ProjectTemplate from './projectComponent/ProjectTemplate'
+import Heading from './Heading'
+import VerticalBar from './VerticalBar'
+import ProjectTemplate from './ProjectTemplate'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -36,16 +36,16 @@ const Horizontal = () => {
     )
     tl
       .to("#prohead1,#bar1,#temp1,#bar2,#temp2,#bar3,#temp3,#prohead2", {
-        transform: "translateX(-55vw)",
+        transform: "translateX(-56vw)",
       })
       .to("#temp1,#bar2,#temp2,#bar3,#temp3,#prohead2", {
-        transform: "translateX(-153.8vw)",
+        transform: "translateX(-157vw)",
       })
       .to("#temp1,#temp2,#bar3,#temp3,#prohead2", {
-        transform: "translateX(-252.6vw)",
+        transform: "translateX(-258vw)",
       })
       .to("#temp2,#temp3,#prohead2", {
-        transform: "translateX(-352.6vw)",
+        transform: "translateX(-363.6vw)",
       })
       .to("#temp3", {
         transform: "translateX(-400vw)",
@@ -59,7 +59,6 @@ const Horizontal = () => {
         trigger: "#img1",
         start: 'top 30%',
         end: 'top 27%',
-        // markers: true,
       }
     }
     )
@@ -68,7 +67,7 @@ const Horizontal = () => {
 
   return (
 
-    <div ref={projRef} id='horizontal_parent' className='w-full h-[350vh] relative pl-40'>
+    <div ref={projRef} id='horizontal_parent' className='w-full h-[350vh] relative pl-20'>
       <div id='horizontal_content' className='w-full h-screen flex sticky gap-20 top-0 overflow-hidden overflow-x-hidden '>
 
         <Heading id={"prohead1"} reverse={false} />
