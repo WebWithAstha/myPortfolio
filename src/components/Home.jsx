@@ -1,16 +1,11 @@
 import React from 'react'
-import Hero from './Hero'
-import Horizontal from './Horizontal'
-import Skills from './Skills'
-import Projects from './projectComponent/Projects'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
-import Trial from './projectComponent/Trial'
-import VerticalBar from './projectComponent/VerticalBar'
-import Heading from './projectComponent/Heading'
-import ContactView from './ContactView'
-import InfiniteText from './InfiniteText'
+import Hero from './hero/Hero'
+import Horizontal from './projectComponent/Horizontal'
+import Skills from './skills/Skills'
 import Footer from './Footer'
+import MovingText from './MovingText'
+import About from './about/About'
+import Animation from './animations/Animation'
 
 
 const Home = () => {
@@ -18,14 +13,15 @@ const Home = () => {
 
   return (
 
-    <div className='w-full  min-h-screen text-[#2c1c13] font-mono'>
+    <div className='w-full  min-h-screen  font-mono'>
 
         <Hero />
+        <MovingText/>
+        <About/>
 
       <Skills />
       <Horizontal/>
-      <InfiniteText/>
-      <ContactView/>
+      <Animation/>
       <Footer/>
       
 
