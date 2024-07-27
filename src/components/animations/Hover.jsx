@@ -18,10 +18,10 @@ const Hover = () => {
       id='heroText'
         initial="initial"
         whileHover="hovered"
-        className="div relative overflow-hidden cursor-pointer">
+        className="div relative w-max overflow-hidden cursor-pointer">
         <h1
          
-          className='text-[17vw] leading-[.8] -mb-4 whitespace-nowrap font-black uppercase font-[bonny]'>
+          className='text-[6vw] leading-[.8] -mb-4 whitespace-nowrap font-black uppercase font-[bonny]'>
           {name.split('').map((l,i)=>(
             <motion.span 
             variants={{
@@ -36,7 +36,7 @@ const Hover = () => {
           ))}
         </h1>
         <h1
-          className='absolute top-0 text-[17vw] leading-[.8] -mb-4 whitespace-nowrap font-black uppercase font-[bonny]'>
+          className='absolute top-0 text-[6vw] leading-[.8] -mb-4 whitespace-nowrap font-black uppercase font-[bonny]'>
           {name.split('').map((l,i)=>(
             <motion.span 
             variants={{

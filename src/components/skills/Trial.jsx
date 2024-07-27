@@ -8,39 +8,33 @@ import { distance } from "@popmotion/popcorn";
 const grid = [
     [],
     [
-        
-        "Reactjs",
-        "Redux",
-        "Express.js",
+
+        "Figma",
         "Node.js",
         "MongoDB",
-        "RESTful APIs",
+        "Razorpay",
+        "Express.js",
     ],
     [
-        "Html",
+        "React",
         "Css",
+        "Html",
+        "Framer Motion",
         "Tailwind Css",
-        "Figma",
-        "Razorpay",
-        
+
     ], [
-        
+
         "Git",
         "Javascript",
         "VS Code",
         "Next.js",
+
+    ], [
         "GitHub",
-        
-    ], [
         "Postman",
         "AJAX",
-        "swiperjs",
-        "gsap",
-    ], [
-        "Framer Motion",
-        "Postman",
-        "AJAX",
-        // "Context API",
+        "Redux",
+        "RESTful APIs",
     ]
 ];
 const gap = 0;
@@ -63,7 +57,7 @@ const Square = ({ active, setActive, colIndex, rowIndex, x, y }) => {
         <motion.div
             drag
             dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-            dragTransition={{ bounceStiffness: 500, bounceDamping: 20 }}
+            dragTransition={{ bounceStiffness: 500, bounceDamping: 30 }}
             dragElastic={1}
             onDragStart={() => setActive({ row: rowIndex, col: colIndex })}
             style={{
@@ -71,8 +65,9 @@ const Square = ({ active, setActive, colIndex, rowIndex, x, y }) => {
                 y: isDragging ? y : dy,
                 zIndex: isDragging ? 1 : 0
             }}
+            transition={{duration:.1}}
             // animate={{ scale: 1.1 }}
-            className="md:px-20 h-max px-4 cursor-pointer rounded-xl md:py-6 py-3 transition-all duration-100 font-semibold mb-[1px] bg-white/[.4] md:text-[2vw] text-[3vw]"
+            className="md:px-20 h-max px-4 cursor-pointer md:py-8 py-2 rounded-full text-purple-400 font-semibold mb-2 border mr-2 md:text-[2vw] text-[4vw]"
         >
             {grid[rowIndex][colIndex]}
         </motion.div>
@@ -98,8 +93,8 @@ const Trial = () => {
 
 
     return (
-        <div className="flex md:justify-center items-center">
-            <div className='w-full h-max flex md:justify-center items-center gap-2 flex-wrap '>
+        <div className="flex px-8 md:px-20 items-center">
+            <div className='w-[80vw] h-max flex items-center flex-wrap '>
                 {grid.map((row, rowIndex) =>
                     row.map((_item, colIndex) => (
                         <Square

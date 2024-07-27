@@ -13,8 +13,9 @@ const Hero = () => {
 
   return (
     <div ref={heroParentRef} className="content shrink-0 pt-20 relative w-full md:min-h-screen overflow-hidden md:pt-32 md:py-20 flex flex-col md:px-20 px-8">
+      <video className='absolute top-0 left-0 w-screen h-full object-cover opacity-20 hue-rotate-[270deg] z-[-1]' autoPlay muted loop src="https://uploads-ssl.webflow.com/65b7bac85c1092089d510616/65b8c737f3618d8dd99da139_VIDEO%20HOME%20(DSK)-transcode.webm"></video>
       <HeroName />
-        <h1 className='text-[4vw] md:mt-10'>Hola friend.</h1>
+        <h2 className='text-[4vw] md:mt-10'>Hola friend.</h2>
       <div className="flex justify-center md:flex-row flex-col md:items-center gap-2 mb-2 md:mb-0 w-full md:mt-0">
         <div className="md:self-end md:w-[40%]">
         <img className="arrow md:w-[10vw] w-[30vw] ml-auto md:mr-[10vw] h-max invert -scale-x-100 shrink-0 -rotate-45" src="   https://cdn-icons-png.flaticon.com/512/17426/17426390.png " alt="" />
