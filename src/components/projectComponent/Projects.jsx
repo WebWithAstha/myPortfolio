@@ -1,24 +1,53 @@
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 import React from 'react'
-import todo from '../../assets/images/projects/todo.png'
-import garden from '../../assets/images/projects/garden.png'
-import Heading from './Heading'
-import VerticalBar from './VerticalBar'
 
 
-const Projects = () => {
+
+
+
+
+
+
+
+
+
+const ProjectBar = ({title,about})=>{
     return (
-        <>
-        <div className="w-full h-screen shrink-0 flex lg:px-40  items-center">
-        <Heading id={"prohead"} reverse={false} />
-        <VerticalBar id={"bar1"} title={"fullstack"} img={"https://images.unsplash.com/photo-1585079542156-2755d9c8a094?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} />
-        <VerticalBar id={"bar1"} title={"backend"} img={"https://images.unsplash.com/photo-1603481546579-65d935ba9cdd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} />
-        <VerticalBar id={"bar1"} title={"frontend"} img={"https://plus.unsplash.com/premium_photo-1664194583917-e2ca85efc15e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} />
-        
+        <h1 className='text-[6vw] cursor-pointer group w-full md:text-center px-8 md:px-20 relative mb-1 py-2 font-[bespoke] font-black uppercase'>{title}
+        <div id='p-abt' className="w-full pointer-events-none group-hover:h-full h-0 absolute overflow-hidden group-hover:top-0 transition-all duration-150 left-0 top-full flex bg-purple-400">
+            <p className='whitespace-nowrap px-4 shrink-0'>{about}</p>
+            <p className='whitespace-nowrap px-4 shrink-0'>{about}</p>
         </div>
-        
-        </>
-
+    </h1>
     )
+}
+const Projects = () => {   
+    useGSAP(()=>{
+        gsap.to("#p-abt p",{
+            x:"-100%",
+            ease:"linear",
+            repeat:-1,
+            duration:4
+        })
+    })
+   
+  return (
+    <>
+    <div className="">
+
+    <div className='w-full flex flex-col justify-center items-center h-max'>
+       <ProjectBar title={"movie app"} about={"Api Intergated fullstack project"} />
+       <ProjectBar title={"internshala"} about={"Mern stack project"} />
+       <ProjectBar title={"ames foundation"} about={"Api Intergated fullstack project"} />
+       <ProjectBar title={"tech quiz"} about={"Api Intergated fullstack project"} />
+       </div>
+       <button className='flex mx-8 md:mx-20 items-center gap-4 border mt-4 justify-center rounded-full md:px-[2vw] px-[6vw] py-[2vw] md:py-[.6vw] text-[5vw] border-purple-400 md:text-[1.4vw]'>View all projects
+                    <img className="arrow w-[6vw] md:w-[2vw] h-max invert inline-block shrink-0 -rotate-45" src="   https://cdn-icons-png.flaticon.com/512/17426/17426390.png " alt="" />
+                </button>
+    </div>
+    </>
+  )
 }
 
 export default Projects
