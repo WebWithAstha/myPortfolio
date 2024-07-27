@@ -17,24 +17,9 @@ const visible ={
 const Skills = () => {
     const skillRef = useRef(null)
 
-    // useGSAP(() => {
-    //     gsap.to("body", {
-    //         backgroundColor: "#d9f99d",
-    //         scrollTrigger: {
-    //             scroller: "body",
-    //             trigger: skillRef.current,
-    //             start: "top 1%",
-    //             end: "top 0%",
-    //         }
-
-    //     })
-    // })
-
-
-
     return (
-        <div ref={skillRef} className='shrink-0 relative w-full md:pt-32 pt-20 pb-40 min-h-screen py-0 flex flex-col'>
-            <h1 className='md:text-[7vw] text-6xl md:mb-32 mb-10 font-[Chillax] lg:px-20 px-10 '>What I Bring to the Table?
+        <div ref={skillRef} className='shrink-0 relative w-full md:pt-32 pt-16 md:pb-40 pb-10 h-max md:min-h-screen py-0 flex  lg:px-20 px-8 flex-col'>
+            <h1 className='md:text-[7vw] text-[12vw] md:mb-28 mb-8 font-[Chillax] leading-tight md:w-[80%] '>What I Bring to the Table?
             </h1>
             <Trial/>
         </div>

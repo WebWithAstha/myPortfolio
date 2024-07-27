@@ -12,11 +12,6 @@ const MovingText = () => {
 
     const textParentRef = useRef(null)
 
-    // const {scrollY}=useScroll({
-    //     container:"body"
-    // })
-    // console.log(scrollY)
-
     const [currentScroll, setcurrentScroll] = useState(0)
     const [scrollDirection, setscrollDirection] = useState(0) 
 
@@ -43,11 +38,11 @@ const MovingText = () => {
 
 
   return (
-    <div id='who-text' ref={textParentRef} className='flex overflow-hidden justify-center my-20'>
-        <h1 className='text-[6vw] -translate-x-full whitespace-nowrap px-6 text-center py-4 shrink-0 w-[calc(100% / 4)]'>wOah who's she?</h1>
-        <h1 className='text-[6vw] -translate-x-full whitespace-nowrap px-6 text-center py-4 shrink-0 w-[calc(100% / 4)]'>wOah who's she?</h1>
-        <h1 className='text-[6vw] -translate-x-full whitespace-nowrap px-6 text-center py-4 shrink-0 w-[calc(100% / 4)]'>wOah who's she?</h1>
-        <h1 className='text-[6vw] -translate-x-full whitespace-nowrap px-6 text-center py-4 shrink-0 w-[calc(100% / 4)]'>wOah who's she?</h1>
+    <div id='who-text' ref={textParentRef} className='flex overflow-hidden justify-center my-8 md:my-20'>
+        <h1 className='md:text-[6vw] text-[12vw] -translate-x-full whitespace-nowrap px-3 md:px-6 text-center py-4 shrink-0 w-[calc(100% / 4)]'>i am?</h1>
+        <h1 className='md:text-[6vw] text-[12vw] -translate-x-full whitespace-nowrap px-3 md:px-6 text-center py-4 shrink-0 w-[calc(100% / 4)]'>i am?</h1>
+        <h1 className='md:text-[6vw] text-[12vw] -translate-x-full whitespace-nowrap px-3 md:px-6 text-center py-4 shrink-0 w-[calc(100% / 4)]'>i am?</h1>
+        <h1 className='md:text-[6vw] text-[12vw] -translate-x-full whitespace-nowrap px-3 md:px-6 text-center py-4 shrink-0 w-[calc(100% / 4)]'>i am?</h1>
     </div>
   )
 }

@@ -18,7 +18,7 @@ const ProjectTemplate = ({id}) => {
                     <div className="h-max items-end w-full pb-10">
                         <h1 className='text-6xl'>Todo List</h1>
                     </div>
-                    <div id='img1' className="h-[60vh] overflow-hidden w-full">
+                    <div id='img1' className="h-[60vh]  rounded-3xl rounded-b-full border-8 border-purple-400 overflow-hidden w-full">
                         <img className='w-full h-full scale-125 object-cover' src={todo} alt="" />
                     </div>
                 </div>
@@ -26,7 +26,7 @@ const ProjectTemplate = ({id}) => {
                     <div className="h-max items-end w-full pb-10">
                         <h1 className='text-6xl'>Garden Guide</h1>
                     </div>
-                    <div id='img2' className="h-[60vh] overflow-hidden w-full">
+                    <div id='img2' className="h-[60vh]  rounded-3xl rounded-b-full border-8 border-purple-400 overflow-hidden w-full">
                         <img className='w-full h-full scale-125 object-cover' src={garden} alt="" />
                     </div>
                 </div>

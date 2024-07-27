@@ -6,6 +6,8 @@ import Footer from './Footer'
 import MovingText from './MovingText'
 import About from './about/About'
 import Animation from './animations/Animation'
+import IntroProject from './projectComponent/IntroProject'
+import Projects from './projectComponent/Projects'
 
 
 const Home = () => {
@@ -20,7 +22,8 @@ const Home = () => {
         <About/>
 
       <Skills />
-      <Horizontal/>
+      <IntroProject/>
+      <Projects/>
       <Animation/>
       <Footer/>
       

@@ -11,69 +11,26 @@ const Hero = () => {
 
   const heroParentRef = useRef(null)
 
-  // useGSAP(() => {
-  //   let tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       scroller: "body",
-  //       trigger: heroParentRef.current,
-  //       start: "top 0%",
-  //       end: "top -100%",
-  //       // snap: true,
-  //       scrub: 1,
-  //       markers: true
-  //     }
-  //   })
-  //   tl
-  //     // .to(heroParentRef.current,{
-  //     //   y:"50%"
-  //     // })
-  //     // .to(heroParentRef.current,{
-  //     //   y:"100%"
-  //     // },"tog")
-  //     .to("#heroText h1:nth-child(1),.desc p,.move-dwn", {
-  //       scale: 0.7,
-  //       opacity: 0,
-  //       duration: 1,
-  //       y: -200,
-  //       rotate: -10,
-  //       ease: 'power3.inOut'
-  //     }, "tog")
-  //   // .to(heroParentRef.current,{
-  //   //   // y:"+=200%"
-  //   // })
-  // })
-
-
   return (
-    <div ref={heroParentRef} className="content shrink-0 pt-20 relative w-full md:h-screen overflow-hidden md:pt-32 md:py-20 flex flex-col md:px-40 px-8">
+    <div ref={heroParentRef} className="content shrink-0 pt-20 relative w-full md:min-h-screen overflow-hidden md:pt-32 md:py-20 flex flex-col md:px-20 px-8">
       <HeroName />
-      <div className="flex md:flex-row flex-col gap-8 md:gap-20 md:mt-16">
-        <div className="flex justify-center items-center gap-20 w-full">
-          <div className="self-end w-max">
-            <div className="h-14 overflow-hidden">
-              <h1 className='move-dwn ml-auto -mt-1.5 font-[bespoke] md:mt-0 text-right text-6xl'>Get</h1>
-            </div>
-            <div className="h-16 overflow-hidden">
-              <h1 className='move-dwn self-end ml-auto uppercase font-black text-6xl'>Resume</h1>
-            </div>
-          </div>
-          <img className="arrow w-[10vw] h-max invert -scale-x-100 shrink-0 -rotate-45" src="   https://cdn-icons-png.flaticon.com/512/17426/17426390.png " alt="" />
-          <div className="md:w-72 h-72 shrink-0 overflow-hidden rounded-t-lg rounded-bl-lg">
-            <img id='heroImg' className='move-dwn w-full absolute h-[50vh] object-[0_27%] object-cover grayscale' src={hero} alt="" />
-            <img id='heroImg' className='move-dwn w-full h-full object-cover relative' src={hero} alt="" />
-          </div>
-          <div className="self-end w-max hidden">
-            <img className="arrow w-[10vw] h-max invert shrink-0 rotate-45" src="   https://cdn-icons-png.flaticon.com/512/17426/17426390.png " alt="" />
-            <div className="h-14 overflow-hidden">
-              <h1 className='move-dwn ml-auto -mt-1.5 font-[bespoke] md:mt-0 text-right text-6xl'>Say</h1>
-            </div>
-            <div className="h-16 overflow-hidden">
-              <h1 className='move-dwn self-end ml-auto uppercase font-black text-6xl'>Namaste</h1>
-            </div>
+        <h1 className='text-[4vw] md:mt-10'>Hola friend.</h1>
+      <div className="flex justify-center md:flex-row flex-col md:items-center gap-2 mb-2 md:mb-0 w-full md:mt-0">
+        <div className="md:self-end md:w-[40%]">
+        <img className="arrow md:w-[10vw] w-[30vw] ml-auto md:mr-[10vw] h-max invert -scale-x-100 shrink-0 -rotate-45" src="   https://cdn-icons-png.flaticon.com/512/17426/17426390.png " alt="" />
+          <div className=" flex flex-col md:mb-0 mb-4 md:items-end justify-start w-max">
+              <h1 className='move-dwn ml-auto md:mr-0  font-[bespoke] md:mt-0 md:text-right md:text-6xl'>Get</h1>
+              <a href="https://drive.google.com/file/d/1rj3PjNjo3ZqeR66l6XvzMydmoz7uAfTQ/view?usp=sharing" download="Astha_Lodhi_Resume">
+              <h1 className='move-dwn md:self-end md:ml-auto uppercase font-black text-5xl md:text-6xl'>Resume</h1>
+              </a>
           </div>
         </div>
-
+        <div className="md:w-72 md:block hidden w-full h-[40vh] shrink-0 overflow-hidden rounded-t-lg rounded-bl-lg">
+          <img id='heroImg' className='move-dwn w-full absolute h-[50vh] object-[0_27%] object-cover grayscale' src={hero} alt="" />
+          <img id='heroImg' className='move-dwn w-full h-full object-cover relative' src={hero} alt="" />
+        </div>
       </div>
+
     </div>
   )
 }

@@ -40,7 +40,7 @@ const grid = [
         "Framer Motion",
         "Postman",
         "AJAX",
-        "Context API",
+        // "Context API",
     ]
 ];
 const gap = 0;
@@ -72,7 +72,7 @@ const Square = ({ active, setActive, colIndex, rowIndex, x, y }) => {
                 zIndex: isDragging ? 1 : 0
             }}
             // animate={{ scale: 1.1 }}
-            className="md:px-20 h-max px-4 cursor-pointer rounded-xl md:py-8 py-3 transition-all duration-100 font-semibold mb-[1px] bg-white/[.4] md:text-[2vw] text-2xl"
+            className="md:px-20 h-max px-4 cursor-pointer rounded-xl md:py-6 py-3 transition-all duration-100 font-semibold mb-[1px] bg-white/[.4] md:text-[2vw] text-[3vw]"
         >
             {grid[rowIndex][colIndex]}
         </motion.div>
@@ -98,8 +98,8 @@ const Trial = () => {
 
 
     return (
-        <div className="flex justify-center items-center">
-            <div className='w-[80vw] h-max flex justify-center items-center gap-2 flex-wrap '>
+        <div className="flex md:justify-center items-center">
+            <div className='w-full h-max flex md:justify-center items-center gap-2 flex-wrap '>
                 {grid.map((row, rowIndex) =>
                     row.map((_item, colIndex) => (
                         <Square
