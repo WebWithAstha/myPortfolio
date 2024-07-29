@@ -103,7 +103,7 @@ const Home = () => {
     <div onMouseMove={e => (handleMouseMove(e))} className='w-full relative min-h-screen  font-mono'>
       <LoadingPage />
 
-      <div id="cursor" className='w-[50px] h-[50px] pointer-events-none fixed -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-purple-600 z-[999]'></div>
+      <div id="cursor" className='w-[50px] bg-transparent h-[50px] pointer-events-none fixed -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-purple-600 z-[999]'></div>
 
 
       <Hero />
